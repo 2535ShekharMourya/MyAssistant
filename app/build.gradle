@@ -1,0 +1,121 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.mygoogleassistant'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.mygoogleassistant"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    /*buildFeatures {
+        dataBinding true
+    }*/
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    def lifecycle_version = "2.3.1"
+    def arch_version = "2.1.0"
+
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.7.0"
+
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
+
+    // Saved state module for ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0"
+
+    // Annotation processor
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.7.0"
+
+    // optional - helpers for implementing LifecycleOwner in a Service
+    implementation "androidx.lifecycle:lifecycle-service:2.7.0"
+
+    // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
+    implementation "androidx.lifecycle:lifecycle-process:2.7.0"
+
+    // optional - ReactiveStreams support for LiveData
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
+
+    // optional - Test helpers for LiveData
+    testImplementation "androidx.arch.core:core-testing:2.2.0"
+    def room_version = "2.3.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    // optional - RxJava2 support for Room
+    implementation "androidx.room:room-rxjava2:$room_version"
+
+    // optional - RxJava3 support for Room
+    implementation "androidx.room:room-rxjava3:$room_version"
+
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    implementation "androidx.room:room-guava:$room_version"
+    // implementation 'the.bot.box:horoscope-api:1.0.2'
+    // optional - Test helpers
+    def volley_version="1.2.1"
+    implementation "com.android.volley:volley:$volley_version"
+    implementation'com.google.android.gms:play-services-vision:20.1.3'
+    implementation "com.google.android.gms:play-services-location:21.1.0"
+    testImplementation "androidx.room:room-testing:$room_version"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
+    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:19.0.0'
+    // implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    // implementation 'com.github.shubham0204:Text2Summary-Android:alpha-05'
+    //implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.1.0'
+    //implementation 'the.bot.box:horoscope-api:1.0.2'
+    implementation 'com.google.android.gms:play-services-location:21.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // implementation 'com.github.CanHub:Android-Image-Cropper:4.3.0'
+    implementation 'com.squareup.picasso:picasso:2.8'
+    //api 'com.theartofdev.edmodo:android-image-cropper:'
+
+   // kapt 'com.android.databinding:compiler:3.2.0-alpha10'
+  //  kapt 'com.android.databinding:compiler:3.2.0'
+
+    //api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    //implementation 'com.github.CanHub:Android-Image-Cropper:4.5.0'
+    //implementation 'om.vanniktech:android-image-cropper:4.5.0'
+    //implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+}
