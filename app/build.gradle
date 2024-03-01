@@ -28,9 +28,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-    /*buildFeatures {
+    buildFeatures {
         dataBinding true
-    }*/
+    }
     kotlinOptions {
         jvmTarget = '17'
     }
@@ -102,16 +102,16 @@ dependencies {
     implementation 'com.google.android.gms:play-services-mlkit-text-recognition:19.0.0'
     // implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
     // implementation 'com.github.shubham0204:Text2Summary-Android:alpha-05'
-    //implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.1.0'
+    implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.1.0'
     //implementation 'the.bot.box:horoscope-api:1.0.2'
     implementation 'com.google.android.gms:play-services-location:21.1.0'
-    implementation 'com.android.support:multidex:1.0.3'
+    //implementation 'com.android.support:multidex:1.0.3'
 
     // implementation 'com.github.CanHub:Android-Image-Cropper:4.3.0'
     implementation 'com.squareup.picasso:picasso:2.8'
     //api 'com.theartofdev.edmodo:android-image-cropper:'
 
-   // kapt 'com.android.databinding:compiler:3.2.0-alpha10'
+    //kapt 'com.android.databinding:compiler:3.2.0-alpha10'
   //  kapt 'com.android.databinding:compiler:3.2.0'
 
     //api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'

@@ -39,5 +39,3 @@ class AssisantAdapter : RecyclerView.Adapter<AssisantAdapter.ViewHolder>() {
     }
     override fun getItemCount()=data.size
 }
-class AssistantAdapter {
-}
