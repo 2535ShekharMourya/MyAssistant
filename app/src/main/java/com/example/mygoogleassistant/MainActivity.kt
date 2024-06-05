@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.example.mygoogleassistant.utils.Utils
 import com.example.mygoogleassistant.utils.Utils.setCustomActionBar
 import com.example.mygoogleassistant.R
@@ -50,15 +51,19 @@ class MainActivity : AppCompatActivity() {
             2.It allows us to interact with other Android components by sending messages.
             3.It gives you information about your app environment.*/
             startActivity(Intent(this, AssistantActivity::class.java))
+            Animatoo.animateDiagonal(this)
         }
         hiGoogle.setOnClickListener {
             startActivity(Intent(this, AssistantActivity::class.java))
+            Animatoo.animateSplit(this)
         }
         googleLens.setOnClickListener {
             startActivity(Intent(this, GoogleLensActivity::class.java))
+            Animatoo.animateInAndOut(this)
         }
         explore.setOnClickListener {
             startActivity(Intent(this, ExploreActivity::class.java))
+            Animatoo.animateFade(this)
         }
     }
 
