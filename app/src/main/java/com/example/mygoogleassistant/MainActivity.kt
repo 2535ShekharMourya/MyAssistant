@@ -19,6 +19,7 @@ import com.example.mygoogleassistant.functions.GoogleLensActivity
 import com.example.mygoogleassistant.utils.Utils.setCustomActionBar
 
 class MainActivity : AppCompatActivity() {
+    // Activity and Fragment known as UI Controller
    /* Both the Activity and Application classes extend the Context class.
      In android, Context is the main important concept and the wrong usage of it leads to memory leakage.
      Activity refers to an individual screen and
