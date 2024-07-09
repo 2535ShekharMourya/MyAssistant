@@ -17,6 +17,7 @@ import com.example.mygoogleassistant.assistant.AssistantActivity
 import com.example.mygoogleassistant.assistant.ExploreActivity
 import com.example.mygoogleassistant.functions.GoogleLensActivity
 import com.example.mygoogleassistant.utils.Utils.setCustomActionBar
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     // Activity and Fragment known as UI Controller
@@ -35,11 +36,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setCustomActionBar(supportActionBar, this)
+        val getCurrentLocation=findViewById<FloatingActionButton>(R.id.get_location)
         // id's of views from xml
         imageView = findViewById(R.id.action_button)
         googleLens = findViewById(R.id.action_google_lens)
         explore = findViewById(R.id.action_explore)
         hiGoogle = findViewById(R.id.hiGoogle)
+
+        getCurrentLocation.setOnClickListener {
+            startActivity(Intent(this,CurrentLocationActivity::class.java))
+        }
 
         if (ContextCompat.checkSelfPermission(this,
                 android.Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED
@@ -76,6 +82,9 @@ class MainActivity : AppCompatActivity() {
             if (grantResults[0]== PackageManager.PERMISSION_GRANTED)
             {
                 Toast.makeText(this,"Permission Granted", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(this,"Permission denied", Toast.LENGTH_SHORT).show()
             }
         }
     }
