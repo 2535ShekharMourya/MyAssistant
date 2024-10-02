@@ -9,4 +9,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="chips">#F1EBE7</color>
     <color name="colorPrimary">#FFFFFFFF</color>
+        <color name="purple">#593c8f</color>
+        <color name="yellow">#FFC000</color>
 </resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/headlineFragment"
+    android:title="Headline"
+    android:icon="@drawable/headline">
+
+</item>
+    <item android:id="@+id/fevoriteFragment"
+        android:title="Fevorite"
+        android:icon="@drawable/fevorite">
+
+    </item>
+    <item android:id="@+id/searchFragment"
+        android:title="Search"
+        android:icon="@drawable/search">
+
+    </item>
+</menu>

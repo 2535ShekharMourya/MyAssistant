@@ -22,4 +22,7 @@
         <item name="fontFamily"> @font/montserrat </item>
         <item name="backgroundTint"> #fff </item>
     </style>
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/purple_700</item>
+    </style>
 </resources>

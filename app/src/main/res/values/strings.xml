@@ -14,4 +14,6 @@
     <string name="today">Today</string>
     <string name="add_image">Add Image</string>
     <string name="title_activity_current_location">CurrentLocationActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
