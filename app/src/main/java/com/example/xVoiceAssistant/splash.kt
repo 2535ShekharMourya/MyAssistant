@@ -1,5 +1,6 @@
 package com.example.xVoiceAssistant
 
+import androidx.activity.enableEdgeToEdge
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo
 
 class splash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         Handler(Looper.getMainLooper()).postDelayed({

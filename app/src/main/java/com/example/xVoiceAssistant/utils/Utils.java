@@ -70,15 +70,4 @@ public class Utils {
     public static final String logKeeper = "Keeper";
     public static final String tableName="assistant_message_table";
 
-    public static void setCustomActionBar(ActionBar supportActionBar, Context context) {
-        supportActionBar.setDisplayShowHomeEnabled(true);
-        supportActionBar.setDisplayShowTitleEnabled(false);
-        LayoutInflater mInflater = LayoutInflater.from(context);
-        @SuppressLint("InflateParams") View mCustomView = mInflater.inflate(R.layout.custom_toolbar, null);
-        supportActionBar.setCustomView(mCustomView);
-        supportActionBar.setDisplayShowCustomEnabled(true);
-    }
-    /*public static void setCustomActionBar(Fragment fragment, Context context) {
-        setCustomActionBar( ((AppCompatActivity) fragment.requireActivity()).getSupportActionBar(), context);
-    }*/
 }

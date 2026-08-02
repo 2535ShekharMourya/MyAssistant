@@ -1,5 +1,6 @@
 package com.example.xVoiceAssistant.assistant
 
+import androidx.activity.enableEdgeToEdge
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -44,9 +45,9 @@ class ExploreActivity : AppCompatActivity() {
     private lateinit var cardViewWeather: CardView
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_explore)
-        Utils.setCustomActionBar(supportActionBar, this)
         //link the textView in which the temperature will be displayed
         temprature = findViewById(R.id.textView)
         greetings = findViewById(R.id.greetings)

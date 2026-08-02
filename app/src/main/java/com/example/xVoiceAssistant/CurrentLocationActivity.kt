@@ -1,5 +1,6 @@
 package com.example.xVoiceAssistant
 
+import androidx.activity.enableEdgeToEdge
 import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,7 @@ class CurrentLocationActivity : AppCompatActivity(), OnMapReadyCallback {
     private val permissionCode=101
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
         binding = ActivityCurrentLocationBinding.inflate(layoutInflater)

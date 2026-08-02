@@ -28,6 +28,7 @@ import android.view.View
 import android.view.ViewAnimationUtils
 import android.view.ViewTreeObserver
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -147,9 +148,9 @@ class AssistantActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_assistant)
        binding = DataBindingUtil.setContentView(this, R.layout.activity_assistant)
-        Utils.setCustomActionBar(supportActionBar, this)
         if (Settings.System.canWrite(this)) {
             ringnote = RingtoneManager.getRingtone(
                 applicationContext,

@@ -1,5 +1,6 @@
 package com.example.xVoiceAssistant.functions;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -48,11 +49,13 @@ public class GoogleLensActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_lens);
         ActionBar actionBar=getSupportActionBar();
-        assert actionBar != null;
-        actionBar.setSubtitle("Insert or Click Photos");
+        if (actionBar != null) {
+            actionBar.setSubtitle("Insert or Click Photos");
+        }
         mResultEt=findViewById(R.id.resultedt);
         mPreviewIv=findViewById(R.id.ImageViewpre);
         b=findViewById(R.id.button);

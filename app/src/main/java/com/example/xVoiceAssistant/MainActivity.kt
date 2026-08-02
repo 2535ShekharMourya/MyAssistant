@@ -1,5 +1,6 @@
 package com.example.xVoiceAssistant
 
+import androidx.activity.enableEdgeToEdge
 import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
@@ -10,8 +11,6 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
-import com.example.xVoiceAssistant.utils.Utils.setCustomActionBar
-import com.example.xVoiceAssistant.R
 import com.example.xVoiceAssistant.assistant.AssistantActivity
 import com.example.xVoiceAssistant.assistant.ExploreActivity
 import com.example.xVoiceAssistant.databinding.ActivityMainBinding
@@ -36,10 +35,10 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setCustomActionBar(supportActionBar, this)
         val getCurrentLocation=findViewById<FloatingActionButton>(R.id.get_location)
         // id's of views from xml
         imageView = findViewById(R.id.action_button)
